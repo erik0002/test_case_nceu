@@ -1,0 +1,62 @@
+.card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.overdue {
+  border-left: 4px solid #d32f2f;
+  background-color: #fff5f5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 600;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.statusSelect {
+  flex-shrink: 0;
+}
+
+.deadline {
+  color: #666;
+}
+
+.deadlineOverdue {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.tag {
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: rgba(21, 101, 192, 0.08);
+}

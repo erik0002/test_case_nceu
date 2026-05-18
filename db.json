@@ -1,0 +1,131 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Настроить окружение разработки",
+      "description": "Установить зависимости и настроить Vite + JSON Server",
+      "status": "done",
+      "priority": "high",
+      "deadline": "2026-05-01",
+      "tags": [
+        "dev",
+        "setup"
+      ],
+      "createdAt": "2026-04-20T10:00:00.000Z",
+      "updatedAt": "2026-04-25T14:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Реализовать список задач",
+      "description": "Карточки задач с фильтрацией, поиском и сортировкой",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-05-20",
+      "tags": [
+        "frontend",
+        "react"
+      ],
+      "createdAt": "2026-04-22T09:00:00.000Z",
+      "updatedAt": "2026-05-10T11:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "title": "Провести code review",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-10",
+      "tags": [
+        "review"
+      ],
+      "createdAt": "2026-03-15T12:00:00.000Z",
+      "updatedAt": "2026-03-15T12:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "title": "Оптимизировать производительность",
+      "description": "Профилирование и устранение узких мест",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-06-01",
+      "tags": [
+        "performance",
+        "frontend"
+      ],
+      "createdAt": "2026-05-05T16:00:00.000Z",
+      "updatedAt": "2026-05-05T16:00:00.000Z"
+    },
+    {
+      "title": "ррмаромаро",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-05-28",
+      "tags": [
+        "performance"
+      ],
+      "createdAt": "2026-05-15T16:27:24.588Z",
+      "updatedAt": "2026-05-15T16:27:24.588Z",
+      "id": "kUlAOMyAgXQ"
+    },
+    {
+      "id": "_7exLHpElT8",
+      "title": "арраомм",
+      "description": "рррпроп",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-05-28",
+      "tags": [
+        "review",
+        "react"
+      ],
+      "createdAt": "2026-05-15T16:27:45.615Z",
+      "updatedAt": "2026-05-15T16:52:43.551Z"
+    },
+    {
+      "title": "оиорпоии",
+      "description": "ошиоршггшр",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-05-29",
+      "tags": [
+        "performance",
+        "dev",
+        "frontend",
+        "setup"
+      ],
+      "createdAt": "2026-05-15T16:29:25.261Z",
+      "updatedAt": "2026-05-15T16:29:25.261Z",
+      "id": "ZOAjZe_uqDc"
+    }
+  ],
+  "tags": [
+    {
+      "id": "1",
+      "name": "dev"
+    },
+    {
+      "id": "2",
+      "name": "setup"
+    },
+    {
+      "id": "3",
+      "name": "frontend"
+    },
+    {
+      "id": "4",
+      "name": "react"
+    },
+    {
+      "id": "5",
+      "name": "docs"
+    },
+    {
+      "id": "6",
+      "name": "review"
+    },
+    {
+      "id": "7",
+      "name": "performance"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
