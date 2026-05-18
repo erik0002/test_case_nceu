@@ -17,6 +17,36 @@
 | Тестирование | Vitest + React Testing Library |
 | Документация UI | Storybook 10 |
 
+## Публикация на GitHub
+
+Проект уже под git (ветка `main`, коммит с полным кодом).
+
+### Автоматически (рекомендуется)
+
+1. Установлен [GitHub CLI](https://cli.github.com/) (`gh`).
+2. Войдите в аккаунт (один раз):
+
+```bash
+gh auth login
+```
+
+3. Свяжите репозиторий и отправьте код:
+
+```powershell
+.\scripts\link-github.ps1
+```
+
+Скрипт создаст публичный репозиторий `test_case_nceu` в вашем аккаунте и выполнит `git push`.
+
+### Вручную
+
+```bash
+git remote add origin https://github.com/<ВАШ_USERNAME>/test_case_nceu.git
+git push -u origin main
+```
+
+Создайте репозиторий на https://github.com/new (имя: `test_case_nceu`, без README).
+
 ## Быстрый старт
 
 ### Требования
