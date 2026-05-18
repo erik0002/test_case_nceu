@@ -41,11 +41,12 @@ gh auth login
 ### Вручную
 
 ```bash
-git remote add origin https://github.com/<ВАШ_USERNAME>/test_case_nceu.git
 git push -u origin main
 ```
 
-Создайте репозиторий на https://github.com/new (имя: `test_case_nceu`, без README).
+Remote уже настроен: `https://github.com/erik0002/test_case_nceu.git`
+
+Создайте репозиторий: [github.com/new](https://github.com/new) — имя `test_case_nceu`, **без** README/.gitignore, затем выполните `git push -u origin main`.
 
 ## Быстрый старт
 
