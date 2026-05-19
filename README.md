@@ -17,57 +17,6 @@
 | Тестирование | Vitest + React Testing Library |
 | Документация UI | Storybook 10 |
 
-## Публикация на GitHub
-
-Проект уже под git (ветка `main`, коммит с полным кодом).
-
-### Автоматически (рекомендуется)
-
-1. Установлен [GitHub CLI](https://cli.github.com/) (`gh`).
-2. Войдите в аккаунт (один раз):
-
-```bash
-gh auth login
-```
-
-3. Свяжите репозиторий и отправьте код:
-
-```powershell
-.\scripts\link-github.ps1
-```
-
-Скрипт создаст публичный репозиторий `test_case_nceu` в вашем аккаунте и выполнит `git push`.
-
-### Вручную
-
-```bash
-git push -u origin main
-```
-
-Remote уже настроен: `https://github.com/erik0002/test_case_nceu.git`
-
-Создайте репозиторий: [github.com/new](https://github.com/new) — имя `test_case_nceu`, **без** README/.gitignore, затем выполните `git push -u origin main`.
-
-## GitHub Pages
-
-Сайт собирается и публикуется **GitHub Actions** при каждом push в `main` (или вручную: Actions → Deploy to GitHub Pages → Run workflow).
-
-**Один раз в настройках репозитория:** Settings → Pages → **Build and deployment** → Source: **GitHub Actions**.
-
-После успешного деплоя приложение будет по адресу:
-
-**https://erik0002.github.io/test_case_nceu/**
-
-На GitHub Pages нет вашего JSON Server: запросы идут на `/test_case_nceu/api`, бэкенд там не запущен (ожидаемо появится ошибка загрузки). Для полного CRUD используйте `npm run dev` или задайте при сборке переменную `VITE_API_BASE` с URL публичного API (например развёрнутого JSON Server с CORS).
-
-Локальная проверка сборки «как на Pages»:
-
-```bash
-set GITHUB_REPOSITORY=erik0002/test_case_nceu
-npm run build
-npm run preview
-```
-
 ## Быстрый старт
 
 ### Требования
@@ -84,10 +33,6 @@ npm install
 # Запуск dev-сервера (Vite + JSON Server одновременно)
 npm run dev
 ```
-
-Приложение: [http://localhost:5173](http://localhost:5173)  
-API (JSON Server): [http://localhost:3001](http://localhost:3001)
-
 ### Отдельный запуск
 
 ```bash
@@ -199,24 +144,3 @@ src/
 **Поток данных:** компоненты → RTK Query hooks → JSON Server (через Vite proxy) → кэш RTK Query → UI.
 
 **Инвалидация кэша:** при мутациях (create/update/delete/patch) автоматически обновляются связанные теги через `invalidatesTags`.
-
-## Модель данных
-
-```typescript
-interface Task {
-  id: string;
-  title: string;
-  description?: string;
-  status: 'todo' | 'inProgress' | 'done';
-  priority: 'low' | 'medium' | 'high';
-  deadline: string;
-  tags: string[];
-  createdAt: string;
-  updatedAt: string;
-}
-
-interface Tag {
-  id: string;
-  name: string;
-}
-```
