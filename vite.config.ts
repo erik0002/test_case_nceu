@@ -2,7 +2,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// GitHub Pages: проект доступен по /<repo>/; в CI переменная GITHUB_REPOSITORY задана автоматически
+function resolveBase(): string {
+  const explicit = process.env.VITE_BASE?.trim()
+  if (explicit) return explicit.endsWith('/') ? explicit : `${explicit}/`
+  const repo = process.env.GITHUB_REPOSITORY?.split('/')[1]
+  if (repo) return `/${repo}/`
+  return '/'
+}
+
 export default defineConfig({
+  base: resolveBase(),
   plugins: [react()],
   server: {
     proxy: {

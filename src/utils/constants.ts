@@ -1,6 +1,15 @@
 import type { TaskPriority, TaskStatus } from '../types';
 
-export const API_BASE = '/api';
+/** Абсолютный URL бэкенда (например JSON Server на Render). Иначе — относительно BASE_URL (локально через proxy Vite). */
+const envApi = import.meta.env.VITE_API_BASE as string | undefined;
+
+function resolveApiBase(): string {
+  if (envApi?.trim()) return envApi.trim().replace(/\/$/, '')
+  const base = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '')
+  return base ? `${base}/api` : '/api'
+}
+
+export const API_BASE = resolveApiBase();
 
 export const TASK_STATUSES: { value: TaskStatus; label: string }[] = [
   { value: 'todo', label: 'К выполнению' },

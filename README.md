@@ -48,6 +48,26 @@ Remote уже настроен: `https://github.com/erik0002/test_case_nceu.git`
 
 Создайте репозиторий: [github.com/new](https://github.com/new) — имя `test_case_nceu`, **без** README/.gitignore, затем выполните `git push -u origin main`.
 
+## GitHub Pages
+
+Сайт собирается и публикуется **GitHub Actions** при каждом push в `main` (или вручную: Actions → Deploy to GitHub Pages → Run workflow).
+
+**Один раз в настройках репозитория:** Settings → Pages → **Build and deployment** → Source: **GitHub Actions**.
+
+После успешного деплоя приложение будет по адресу:
+
+**https://erik0002.github.io/test_case_nceu/**
+
+На GitHub Pages нет вашего JSON Server: запросы идут на `/test_case_nceu/api`, бэкенд там не запущен (ожидаемо появится ошибка загрузки). Для полного CRUD используйте `npm run dev` или задайте при сборке переменную `VITE_API_BASE` с URL публичного API (например развёрнутого JSON Server с CORS).
+
+Локальная проверка сборки «как на Pages»:
+
+```bash
+set GITHUB_REPOSITORY=erik0002/test_case_nceu
+npm run build
+npm run preview
+```
+
 ## Быстрый старт
 
 ### Требования
